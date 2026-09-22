@@ -1,4 +1,4 @@
-.PHONY: core-build core-run devcontainer-build images print-test print-acopio print-acopio-test
+.PHONY: core-build core-run devcontainer-build images print-test print-acopio print-acopio-test print-apertura
 
 
 core-build:
@@ -22,3 +22,6 @@ print-acopio: devcontainer-build
 
 print-acopio-test: devcontainer-build
 	docker compose run --rm --entrypoint="env PYTHONPATH=/workspace/src python -m tm_t20iiil.prints.acopio_test" tm-t20iiil-devcontainer
+
+print-apertura: devcontainer-build
+	docker compose run --rm --entrypoint="env PYTHONPATH=/workspace/src python -m tm_t20iiil.prints.apertura" tm-t20iiil-devcontainer

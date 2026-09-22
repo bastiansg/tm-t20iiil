@@ -8,9 +8,12 @@ from tm_t20iiil.printer import print_and_wait
 
 STUDIO_SEPARATOR = "#" * 48
 ITEM_SEPARATOR = "-" * 48
+QR_PATH = Path("resources/acopio/acopio-qr.png")
 
 SECTION_IMAGES = {
-    "2 * BOUGIE WOOGIE": (Path("resources/acopio/images/01-bougie-woogie.png"),),
+    "2 * BOUGIE WOOGIE": (
+        Path("resources/acopio/images/01-bougie-woogie.png"),
+    ),
     "3 * DE LA FORMA": (Path("resources/acopio/images/01-de-la-forma.png"),),
     "7 * ITEM": (Path("resources/acopio/images/01-items.png"),),
     "10 * JUAN CRUZ": (
@@ -26,7 +29,9 @@ SECTION_IMAGES = {
     "16 * PEDRO LEAL": (Path("resources/acopio/images/01-pedro-leal.png"),),
 }
 
-ENTRIES = json.loads(Path(__file__).with_name("acopio.json").read_text(encoding="utf-8"))
+ENTRIES = json.loads(
+    Path(__file__).with_name("acopio.json").read_text(encoding="utf-8")
+)
 
 
 def get_printer() -> Usb:
@@ -86,6 +91,12 @@ def print_acopio(printer: Usb, limit: int | None = None) -> None:
     for entry in islice(ENTRIES, limit):
         print_entry(printer, entry["title"], entry["items"])
 
+    printer.block_text(STUDIO_SEPARATOR)
+    printer.text("\n\n\n\n")
+    printer.set(align="center")
+    printer.block_text("Curaduría: Delfina Rabán ACOPIO")
+    printer.text("\n\n\n\n")
+    printer.image(str(QR_PATH), center=True)
     printer.text("\n")
     printer.cut()
 
