@@ -1,0 +1,39 @@
+{
+    "name": "tm-t20iiil",
+    "initializeCommand": "make devcontainer-build",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "tm-t20iiil-devcontainer",
+    "runServices": ["tm-t20iiil-devcontainer"],
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "extensions.verifySignature": false,
+                "files.trimFinalNewlines": true,
+                "files.trimTrailingWhitespace": true,
+                "[python]": {
+                    "editor.defaultFormatter": "charliermarsh.ruff",
+                    "editor.codeActionsOnSave": {
+                        "source.fixAll.ruff": "explicit",
+                        "source.organizeImports.ruff": "explicit"
+                    }
+                },
+                "[json]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "editor.formatOnSave": true,
+                "ruff.lineLength": 80
+            },
+            "extensions": [
+                "ms-python.python",
+                "charliermarsh.ruff",
+                "esbenp.prettier-vscode",
+                "eamodio.gitlens",
+                "ms-azuretools.vscode-docker",
+                "tamasfe.even-better-toml",
+                "christian-kohler.path-intellisense"
+            ]
+        }
+    },
+    "postCreateCommand": "sh .devcontainer/entrypoint.sh"
+}

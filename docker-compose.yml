@@ -1,0 +1,24 @@
+services:
+    tm-t20iiil-core:
+        image: tm-t20iiil-core
+        container_name: tm-t20iiil-core
+        build:
+            context: .
+            dockerfile: Dockerfile
+            target: core
+        volumes:
+            - /run/udev:/run/udev:ro
+        privileged: true
+
+    tm-t20iiil-devcontainer:
+        image: tm-t20iiil-devcontainer
+        container_name: tm-t20iiil-devcontainer
+        build:
+            context: .
+            dockerfile: Dockerfile
+            target: devcontainer
+        volumes:
+            - .:/workspace:cached
+            - /run/udev:/run/udev:ro
+        privileged: true
+        entrypoint: ["tail", "-f", "/dev/null"]
