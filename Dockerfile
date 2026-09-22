@@ -10,8 +10,10 @@ RUN --mount=type=cache,target=/var/cache/apt \
     ca-certificates \
     curl \
     git-core \
+    librsvg2-bin \
     libusb-1.0-0 \
     openssh-client \
+    potrace \
     python${PYTHON_VERSION} \
     python${PYTHON_VERSION}-dev \
     python3-setuptools \

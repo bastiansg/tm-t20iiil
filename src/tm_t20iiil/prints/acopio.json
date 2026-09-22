@@ -1,0 +1,269 @@
+[
+  {
+    "title": "1 * ATELIER FOMENTA",
+    "items": [
+      {
+        "title": "Mesa de caucho",
+        "description": "Caucho, remaches",
+        "measures": "432 × 432 × 432 mm",
+        "year": "2025",
+        "price": "USD 1200"
+      },
+      {
+        "title": "Estantería de caucho (02)",
+        "description": "Caucho, remaches",
+        "measures": "177 × 279 × 279 mm",
+        "year": "2025",
+        "price": "USD 750"
+      }
+    ]
+  },
+  {
+    "title": "2 * BOUGIE WOOGIE",
+    "items": [
+      {
+        "title": "Volute/Valet",
+        "description": "Acero-algarrobo sudamericano",
+        "measures": "1200 × 650 × 320 mm",
+        "year": "2026",
+        "price": "USD 800"
+      }
+    ]
+  },
+  {
+    "title": "3 * DE LA FORMA",
+    "items": [
+      {
+        "title": "Sal y Pimienta Ápice",
+        "description": "Acero inoxidable torneado",
+        "measures": "11 × Ø 5 cm",
+        "year": "2026",
+        "price": "USD 295 (conjunto)"
+      },
+      {
+        "title": "Silla Domingo",
+        "description": "Guatambú y algarrobo",
+        "measures": "400 × 400 × 890 mm",
+        "year": "2026",
+        "price": "USD 400"
+      }
+    ]
+  },
+  {
+    "title": "4 * estudiojunto",
+    "items": [
+      {
+        "title": "Olica",
+        "description": "Acrílico esmerilado, acero inoxidable, fuente de luz",
+        "measures": "190 × 365 mm",
+        "year": "2026",
+        "price": "USD 250"
+      }
+    ]
+  },
+  {
+    "title": "5 * FZSM ESTUDIO",
+    "items": [
+      {
+        "title": "Silla dos",
+        "description": "Acero Inox y algarrobo",
+        "measures": "75 × 45 × 37 mm",
+        "year": "",
+        "price": "250 USD"
+      }
+    ]
+  },
+  {
+    "title": "6 * F. STUDIO",
+    "items": [
+      {
+        "title": "Mesas cascata",
+        "description": "Vidrio",
+        "measures": "18 × 36 × 12 cm",
+        "year": "",
+        "price": "USD 1200"
+      },
+      {
+        "title": "Lanterna Vidrio",
+        "description": "Vidrio",
+        "measures": "",
+        "year": "2026",
+        "price": "USD 450"
+      }
+    ]
+  },
+  {
+    "title": "7 * ITEM",
+    "items": [
+      {
+        "title": "Stand By",
+        "description": "Caño y planchuela de aluminio, blastinados y anodizados, iluminación led",
+        "measures": "Ø300 × 1800 mm",
+        "year": "2026",
+        "price": "USD 1.400"
+      }
+    ]
+  },
+  {
+    "title": "8 * IRO",
+    "items": [
+      {
+        "title": "Vaso Ugoku S",
+        "description": "Cristal soplado libre, láminas de vidrio y caña de vidrio",
+        "measures": "23 × 18 × 8 cm",
+        "year": "2026",
+        "price": "USD 530"
+      },
+      {
+        "title": "Vaso Ugoku M",
+        "description": "Cristal soplado libre, láminas de vidrio y caña de vidrio",
+        "measures": "31,5 × 18,5 × 8,5 cm",
+        "year": "2026",
+        "price": "USD 750"
+      },
+      {
+        "title": "Oviro",
+        "description": "Vidrio (rosa, marfil y azul)",
+        "measures": "Medidas variables",
+        "year": "2023",
+        "price": "USD 200"
+      }
+    ]
+  },
+  {
+    "title": "9 * JOAQUÍN EDELSTEIN",
+    "items": [
+      {
+        "title": "Chocobarras",
+        "description": "Cemento, ladrillos y barras de hierro aletado de 4 mm",
+        "measures": "65 × 25 × 30 cm",
+        "year": "2026",
+        "price": "USD 600"
+      }
+    ]
+  },
+  {
+    "title": "10 * JUAN CRUZ",
+    "items": [
+      {
+        "title": "BCCM01",
+        "description": "Caño y macizo de aluminio torneado, vidrio, fuente de luz LED",
+        "measures": "400 × 400 × 450 mm",
+        "year": "2026",
+        "price": "USD 400"
+      },
+      {
+        "title": "BCCM05",
+        "description": "Caño y macizo de aluminio torneado, vidrio, fuente de luz LED",
+        "measures": "60 × 40 × 40 cm",
+        "year": "2026",
+        "price": "USD 400"
+      },
+      {
+        "title": "BCCM11",
+        "description": "Caño y macizo de aluminio torneado, vidrio, fuente de luz LED",
+        "measures": "600 × 200 × 600 mm",
+        "year": "2026",
+        "price": "USD 400"
+      }
+    ]
+  },
+  {
+    "title": "11 * LO ENCONTRADO",
+    "items": [
+      {
+        "title": "Soporte para un acervo geológico",
+        "description": "Aluminio y mármol",
+        "measures": "220 × 250 × 1100 mm",
+        "year": "2026",
+        "price": "USD 1.700"
+      }
+    ]
+  },
+  {
+    "title": "12 * MARÍA EGAN",
+    "items": [
+      {
+        "title": "7:38 pm",
+        "description": "Vidrio, acero inoxidable, tubo de luz y conexiones eléctricas",
+        "measures": "185 × 400 × 142 mm",
+        "year": "2026",
+        "price": "USD 500"
+      }
+    ]
+  },
+  {
+    "title": "13 * ESTUDIO MUTUM",
+    "items": [
+      {
+        "title": "Kabuto (LONGO) - Banco/Mesa lateral",
+        "description": "Acero al carbono, pintura PU, vidrio extra clear, cable de acero y parafusos",
+        "measures": "42 × 140 × 35 cm",
+        "year": "2026",
+        "price": "USD 1.700"
+      },
+      {
+        "title": "Tondo -Espejo",
+        "description": "Aluminio, MDF, espejo 4 mm y parafusos",
+        "measures": "Ø 36 × 41 × 3 cm",
+        "year": "2026",
+        "price": "Consultar precio"
+      },
+      {
+        "title": "Toco -Luminaria",
+        "description": "Aluminio, acrílico, LED 12V y parafusos",
+        "measures": "28 × 15 × 8 cm",
+        "year": "2025",
+        "price": "Consultar precio"
+      }
+    ]
+  },
+  {
+    "title": "14 * LA POLTRONA",
+    "items": [
+      {
+        "title": "Banco petra",
+        "description": "Chapa de hierro, pintura electrostática, tejido artesanal en fibra natural de sisal",
+        "measures": "40 × 40 × 40 cm",
+        "year": "",
+        "price": "USD 1.400"
+      }
+    ]
+  },
+  {
+    "title": "15 * CAROL GAY",
+    "items": [
+      {
+        "title": "Sin título",
+        "description": "Acero al carbono, pintura laqueada PU y vidrio extra clear",
+        "measures": "39 × 45 × 51 cm",
+        "year": "2026",
+        "price": "USD 1.700"
+      }
+    ]
+  },
+  {
+    "title": "16 * PEDRO LEAL",
+    "items": [
+      {
+        "title": "Estructura espejo - Espejo con macetero",
+        "description": "Madera maciza torneada, espejo, vidrio y acabado en aceite natural",
+        "measures": "65 × 36 × 16 cm",
+        "year": "2026",
+        "price": "USD 750"
+      }
+    ]
+  },
+  {
+    "title": "17 * VIRGINIA JAKIM",
+    "items": [
+      {
+        "title": "Mini Oasis",
+        "description": "Aluminio, pintura electrostática, cable textil, ladrillo de cemento, lámparas cromadas, caja de pase plástica, interruptores embutidos",
+        "measures": "1500 × 600 × 300 mm",
+        "year": "2026",
+        "price": "USD 680"
+      }
+    ]
+  }
+]

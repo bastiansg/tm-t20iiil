@@ -5,8 +5,11 @@ from time import monotonic
 from escpos.printer import Usb
 from usb.core import USBTimeoutError
 
-from tm_t20iiil.config import config
-from tm_t20iiil.console import render_print_completed, render_print_started
+from tm_t20iiil.printer.config import config
+from tm_t20iiil.utils.console import (
+    render_print_completed,
+    render_print_started,
+)
 
 
 @dataclass(frozen=True, slots=True)
