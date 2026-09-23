@@ -8,6 +8,7 @@ from pydantic_settings import BaseSettings
 class ImageConfig(BaseModel):
     orientation: Literal["square", "portrait", "landscape"]
     brightness_threshold: float = Field(ge=0, le=1)
+    horizontal_margin: float = Field(default=0, ge=0, lt=0.5)
 
 
 class Config(BaseSettings):
@@ -17,12 +18,40 @@ class Config(BaseSettings):
     images_directory: Path = Path("resources/acopio/images")
     supported_formats: frozenset[str] = frozenset({".jpeg", ".jpg", ".png"})
     images: dict[str, ImageConfig] = {
+        "01-atelier-fomenta.png": ImageConfig(
+            orientation="square",
+            brightness_threshold=0.8,
+        ),
         "01-bougie-woogie.png": ImageConfig(
+            orientation="portrait",
+            brightness_threshold=0.8,
+        ),
+        "01-carol-gay.png": ImageConfig(
             orientation="portrait",
             brightness_threshold=0.8,
         ),
         "01-de-la-forma.png": ImageConfig(
             orientation="portrait",
+            brightness_threshold=0.8,
+        ),
+        "01-estudio-mutum.png": ImageConfig(
+            orientation="square",
+            brightness_threshold=0.8,
+        ),
+        "01-estudiojunto.png": ImageConfig(
+            orientation="portrait",
+            brightness_threshold=0.8,
+        ),
+        "01-f-estudio.png": ImageConfig(
+            orientation="square",
+            brightness_threshold=0.8,
+        ),
+        "01-fzsm-studio.png": ImageConfig(
+            orientation="portrait",
+            brightness_threshold=0.8,
+        ),
+        "01-iro.png": ImageConfig(
+            orientation="square",
             brightness_threshold=0.8,
         ),
         "01-items.png": ImageConfig(
@@ -44,10 +73,19 @@ class Config(BaseSettings):
         "01-maria-egan.png": ImageConfig(
             orientation="landscape",
             brightness_threshold=0.8,
+            horizontal_margin=0.25,
         ),
         "01-pedro-leal.png": ImageConfig(
             orientation="portrait",
             brightness_threshold=0.8,
+        ),
+        "01-studio-junto.png": ImageConfig(
+            orientation="portrait",
+            brightness_threshold=0.8,
+        ),
+        "01-virginia-jakim.jpeg": ImageConfig(
+            orientation="portrait",
+            brightness_threshold=0.9,
         ),
         "02-juan-cruz.png": ImageConfig(
             orientation="square",

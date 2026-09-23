@@ -3,7 +3,7 @@ import subprocess
 from io import BytesIO
 from pathlib import Path
 
-from PIL import Image, ImageOps
+from PIL import Image, ImageFilter, ImageOps
 
 from tm_t20iiil.scripts.acopio.config import config
 
@@ -12,12 +12,16 @@ def convert_image(source_path: Path, destination_directory: Path) -> None:
     image_config = config.images[source_path.name]
     orientation = image_config.orientation
     brightness_threshold = image_config.brightness_threshold
+    horizontal_margin = image_config.horizontal_margin
 
     with Image.open(source_path) as source_image:
         image = ImageOps.exif_transpose(source_image).convert("RGBA")
         aspect_ratio = image.height / image.width
 
     width, height = config.get_image_size(orientation, aspect_ratio)
+    content_scale = 1 - 2 * horizontal_margin
+    width = round(width * content_scale)
+    height = round(height * content_scale)
     if height > config.max_height:
         width = round(width * config.max_height / height)
         height = config.max_height
@@ -26,7 +30,7 @@ def convert_image(source_path: Path, destination_directory: Path) -> None:
     canvas.alpha_composite(image)
 
     bitmap = BytesIO()
-    canvas.convert("L").save(bitmap, format="PPM")
+    canvas.convert("L").filter(ImageFilter.MinFilter(3)).save(bitmap, format="PPM")
 
     destination_path = destination_directory / f"{source_path.stem}.svg"
     subprocess.run(
@@ -72,7 +76,14 @@ def convert_image(source_path: Path, destination_directory: Path) -> None:
             mode="1",
         )
 
-        black_and_white_image.save(png_path)
+        output_width = round(width / content_scale)
+        output_image = Image.new("1", (output_width, height), 1)
+        output_image.paste(
+            black_and_white_image,
+            ((output_width - width) // 2, 0),
+        )
+
+        output_image.save(png_path)
 
     print(f"{source_path.name}: {orientation} -> {destination_path}")
 

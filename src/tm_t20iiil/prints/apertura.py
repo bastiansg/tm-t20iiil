@@ -5,7 +5,7 @@ from escpos.printer import Usb
 from tm_t20iiil.printer import print_and_wait
 from tm_t20iiil.prints.acopio import ITEM_SEPARATOR, get_printer
 
-REPEAT_COUNT = 10
+REPEAT_COUNT = 30
 TEXT_BLOCK = (
     "apertura apertura apertura",
     "Local 6",

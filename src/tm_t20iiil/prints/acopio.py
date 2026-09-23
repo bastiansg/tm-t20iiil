@@ -11,22 +11,36 @@ ITEM_SEPARATOR = "-" * 48
 QR_PATH = Path("resources/acopio/acopio-qr.png")
 
 SECTION_IMAGES = {
+    "1 * ATELIER FOMENTA": (
+        Path("resources/acopio/images/01-atelier-fomenta.png"),
+    ),
     "2 * BOUGIE WOOGIE": (
         Path("resources/acopio/images/01-bougie-woogie.png"),
     ),
     "3 * DE LA FORMA": (Path("resources/acopio/images/01-de-la-forma.png"),),
+    "4 * estudiojunto": (
+        Path("resources/acopio/images/01-estudiojunto.png"),
+    ),
+    "5 * FZSM ESTUDIO": (Path("resources/acopio/images/01-fzsm-studio.png"),),
+    "6 * F. STUDIO": (Path("resources/acopio/images/01-f-estudio.png"),),
     "7 * ITEM": (Path("resources/acopio/images/01-items.png"),),
+    "8 * IRO": (Path("resources/acopio/images/01-iro.png"),),
     "10 * JUAN CRUZ": (
         Path("resources/acopio/images/01-juan-cruz.png"),
-        Path("resources/acopio/images/02-juan-cruz.png"),
-        Path("resources/acopio/images/03-juan-cruz.png"),
     ),
     "11 * LO ENCONTRADO": (
         Path("resources/acopio/images/01-lo-encontrado.png"),
     ),
     "12 * MARÍA EGAN": (Path("resources/acopio/images/01-maria-egan.png"),),
+    "13 * ESTUDIO MUTUM": (
+        Path("resources/acopio/images/01-estudio-mutum.png"),
+    ),
     "14 * LA POLTRONA": (Path("resources/acopio/images/01-la-poltrona.png"),),
+    "15 * CAROL GAY": (Path("resources/acopio/images/01-carol-gay.png"),),
     "16 * PEDRO LEAL": (Path("resources/acopio/images/01-pedro-leal.png"),),
+    "17 * VIRGINIA JAKIM": (
+        Path("resources/acopio/images/01-virginia-jakim.png"),
+    ),
 }
 
 ENTRIES = json.loads(
@@ -45,6 +59,9 @@ def get_printer() -> Usb:
 
 def print_item(printer: Usb, item: dict[str, str]) -> None:
     for field in ("title", "description", "measures", "year", "price"):
+        if field in ("measures", "year") and not item[field]:
+            continue
+
         printer.block_text(item[field])
         printer.text("\n")
 
@@ -69,10 +86,13 @@ def print_entry(
 
         print_item(printer, item)
 
-    for image_path in SECTION_IMAGES.get(heading, ()):
+    image_paths = SECTION_IMAGES.get(heading, ())
+    for image_path in image_paths:
         printer.image(str(image_path), center=True)
 
     printer.text("\n")
+    if image_paths:
+        printer.text("\n")
 
 
 def print_acopio(printer: Usb, limit: int | None = None) -> None:
@@ -93,8 +113,9 @@ def print_acopio(printer: Usb, limit: int | None = None) -> None:
 
     printer.block_text(STUDIO_SEPARATOR)
     printer.text("\n\n\n\n")
-    printer.set(align="center")
+    printer.set(bold=True, align="center")
     printer.block_text("Curaduría: Delfina Rabán ACOPIO")
+    printer.set(bold=False)
     printer.text("\n\n\n\n")
     printer.image(str(QR_PATH), center=True)
     printer.text("\n")
