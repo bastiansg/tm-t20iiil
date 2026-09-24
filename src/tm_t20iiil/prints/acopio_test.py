@@ -7,7 +7,7 @@ from tm_t20iiil.prints.acopio import get_printer, print_acopio
 def main() -> None:
     printer = get_printer()
     try:
-        print_and_wait(printer, partial(print_acopio, limit=2))
+        print_and_wait(printer, partial(print_acopio, limit=4))
     finally:
         printer.close()
 

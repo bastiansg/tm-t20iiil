@@ -25,6 +25,9 @@ SECTION_IMAGES = {
     "6 * F. STUDIO": (Path("resources/acopio/images/01-f-estudio.png"),),
     "7 * ITEM": (Path("resources/acopio/images/01-items.png"),),
     "8 * IRO": (Path("resources/acopio/images/01-iro.png"),),
+    "9 * JOAQUÍN EDELSTEIN": (
+        Path("resources/acopio/images/01-joaquin-edelstein.png"),
+    ),
     "10 * JUAN CRUZ": (
         Path("resources/acopio/images/01-juan-cruz.png"),
     ),
@@ -87,6 +90,9 @@ def print_entry(
         print_item(printer, item)
 
     image_paths = SECTION_IMAGES.get(heading, ())
+    if image_paths:
+        printer.text("\n")
+
     for image_path in image_paths:
         printer.image(str(image_path), center=True)
 

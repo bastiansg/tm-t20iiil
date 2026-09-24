@@ -58,6 +58,10 @@ class Config(BaseSettings):
             orientation="portrait",
             brightness_threshold=0.8,
         ),
+        "01-joaquin-edelstein.png": ImageConfig(
+            orientation="portrait",
+            brightness_threshold=0.8,
+        ),
         "01-juan-cruz.png": ImageConfig(
             orientation="portrait",
             brightness_threshold=0.8,
